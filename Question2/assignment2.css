@@ -1,10 +1,12 @@
 .success {
+	display: inline-block;
 	background-color: lightgreen;
 	border-top: 3px solid darkgreen;
 	border-bottom: 3px solid darkgreen;
 }
 
 .error {
+	display: inline-block;
 	background-color: pink;
 	border-top: 3px solid darkred;
 	border-bottom: 3px solid darkred;
