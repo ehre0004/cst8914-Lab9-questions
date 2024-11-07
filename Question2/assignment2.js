@@ -54,6 +54,7 @@ function validateForm() {
 	var isValid = false;
 	var list = [];
 	for (let x of Object.values(form)) {
+		console.log('form field: '+x.id+', value: '+x.value);
 		if (x == null || x.value == "") {
 			isValid = false;
 			list.push(getReadableName(x.id))
