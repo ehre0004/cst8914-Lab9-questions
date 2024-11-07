@@ -63,6 +63,9 @@ function validateForm() {
 	}
 	if (!isValid) {
 		setStatus('Error. Please enter a value for the following form fields:'+printReadableList(list),'error');
+		return false;
+	} else {
+		return true;
 	}
 }
 
@@ -73,7 +76,9 @@ function sendComments (e) {
 	let msg = "Thank you for sending your comments. Your comments have already been thrown into the dustbin of the Interwebs, and will be ignored at once!"	;
 
 	// Now, add the code to insert the msg into the aria live region
-	setStatus(msg, 'success');
+	if (validateForm()) {
+		setStatus(msg, 'success');
+	}
 
 	
 } // End of sendComments
