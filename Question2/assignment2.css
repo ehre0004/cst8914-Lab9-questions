@@ -2,14 +2,12 @@
 	background-color: lightgreen;
 	border-top: 3px solid darkgreen;
 	border-bottom: 3px solid darkgreen;
-	color: darkgreen;
 }
 
 .error {
 	background-color: pink;
 	border-top: 3px solid darkred;
 	border-bottom: 3px solid darkred;
-	color: darkred;
 }
 
 .success, .error {
