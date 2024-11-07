@@ -16,7 +16,6 @@ for (let i =0 ; i < x.length; i++) {
 let y = document.querySelectorAll(".head2");
 for (let i = 0; i < y.length; i++) {
 	tabHeadings[y[i].id.replace("H2", "TabPanel")] = y[i];
-	console.log("y.id.replace(\"H2\", \"TabPanel\")="+y.id.replace("H2", "TabPanel"));
 }
 
 // If left (37) or right (39) arrow keys are pressed, change the focus on the tab buttons, but do not activate.
