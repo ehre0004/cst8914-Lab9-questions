@@ -1,5 +1,6 @@
 let tabBtns = [];
 let tabPanels = {};
+let tabHeadings = {};
 
 tabBtns = Array.from(document.querySelectorAll(".tabBtn"));
 for (let i =0 ; i < tabBtns.length; i++) {
@@ -10,6 +11,12 @@ for (let i =0 ; i < tabBtns.length; i++) {
 let x = document.querySelectorAll(".tabPanel");
 for (let i =0 ; i < x.length; i++) {
 	tabPanels[x[i].id] = x[i];
+}
+
+let y = document.querySelectorAll(".head2");
+for (let i = 0; i < y.length; i++) {
+	tabHeadings[y.id.replace("H2", "TabPanel")] = y[i];
+	console.log("y.id.replace(\"H2\", \"TabPanel\")="+y.id.replace("H2", "TabPanel"));
 }
 
 // If left (37) or right (39) arrow keys are pressed, change the focus on the tab buttons, but do not activate.
@@ -24,10 +31,12 @@ function focusTab (e) {
 // If tab button is clicked (mouse, touch, Enter/Space) expose that tab's panel and hide the others
 function selectTab(e) {
 	let tabPanelID = e.target.id.replace("Btn", "Panel");
+	
 
 	for (var i = 0; i < tabBtns.length; i++) {
 		if (tabBtns[i].id == e.target.id) {
 			tabPanels[tabPanelID].classList.remove("hidden");
+			tabHeadings[tabPanelID].focus();
 			tabBtns[i].removeAttribute("tabindex");
 			tabBtns[i].setAttribute("aria-selected", "true");
 			tabBtns[i].parentNode.classList.add("selectedTab");
