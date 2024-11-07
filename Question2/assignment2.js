@@ -82,7 +82,6 @@ function sendComments (e) {
 	let msg = "Thank you for sending your comments. Your comments have already been thrown into the dustbin of the Interwebs, and will be ignored at once!"	;
 
 	// Now, add the code to insert the msg into the aria live region
-	window.location.href = "#status";
 	if (validateForm()) {
 		setStatus(msg, 'success');
 	}
