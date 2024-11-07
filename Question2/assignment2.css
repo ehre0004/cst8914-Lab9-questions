@@ -1,19 +1,16 @@
 .success {
 	background-color: lightgreen;
-	border-top: 3px solid darkgreen;
-	border-bottom: 3px solid darkgreen;
-	width: 20em;
+	border: 3px solid darkgreen;
 }
 
 .error {
 	background-color: pink;
-	border-top: 3px solid darkred;
-	border-bottom: 3px solid darkred;
-	width: 20em;
+	border: 3px solid darkred;
 }
 
 .success, .error {
 	padding: 10px;
+	width: 20em;
 }
 
 ol ol {
