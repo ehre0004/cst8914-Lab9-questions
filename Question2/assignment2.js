@@ -62,7 +62,7 @@ function validateForm() {
 		}
 	}
 	if (!isValid) {
-		setStatus('Error. Please enter a value for the following form fields:'+printReadableList(list),'error');
+		setStatus('Error. Please enter a value for the following form fields: '+printReadableList(list),'error');
 		return false;
 	} else {
 		return true;
