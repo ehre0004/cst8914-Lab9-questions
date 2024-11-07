@@ -53,10 +53,10 @@ function validateForm() {
 	};
 	var isValid = false;
 	var list = [];
-	for (let x of form) {
-		if (x == null || x.value == "") {
+	for (let x in form) {
+		if (form[x] == null || form[x].value == "") {
 			isValid = false;
-			list.push(getReadableName(x.id))
+			list.push(getReadableName(form[x].id))
 		} else {
 			isValid = true;
 		}
