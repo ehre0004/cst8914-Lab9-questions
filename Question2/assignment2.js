@@ -17,7 +17,7 @@ if (submitBtn) {
 // provides the code for setting a message to the aria live region
 function setStatus(msg) {
 	var statusDiv = document.getElementById("status");
-	statusDiv.innerHTML = "&lt;p&gt;"+msg+"&lt;/p&gt;";
+	statusDiv.innerHTML = "<p>"+msg+"</p>";
 }
 
 function sendComments (e) {
