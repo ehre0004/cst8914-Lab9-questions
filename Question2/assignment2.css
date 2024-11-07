@@ -12,6 +12,10 @@
 	color: darkred;
 }
 
+.success, .error {
+	padding: 10px;
+}
+
 ol ol {
 	list-style-type: lower-alpha;
 }
