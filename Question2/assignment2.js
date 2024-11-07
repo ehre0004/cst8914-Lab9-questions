@@ -51,18 +51,24 @@ function validateForm() {
 		email: document.getElementById('emailaddy'),
 		comments: document.getElementById('comments')
 	};
-	var isValid = false;
+	var isValid = [];
 	var list = [];
 	for (let x of Object.values(form)) {
 		console.log('form field: '+x.id+', value: '+x.value);
 		if (x == null || x.value == "") {
-			isValid = false;
+			isValid.push(false);
 			list.push(getReadableName(x.id))
 		} else {
-			isValid = true;
+			isValid.push(true);
 		}
 	}
-	if (!isValid) {
+	var check = true;
+	for (let x of isValid) {
+		if (x == false) {
+			check = false;
+		}
+	}
+	if (!check) {
 		setStatus('Error. Please enter a value for the following form fields: '+printReadableList(list),'error');
 		return false;
 	} else {
