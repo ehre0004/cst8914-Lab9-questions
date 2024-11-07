@@ -8,7 +8,7 @@
 	border: 3px solid darkred;
 }
 
-.success, .error {
+.success, .error, .desc {
 	padding: 10px;
 	width: 20em;
 }
