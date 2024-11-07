@@ -1,15 +1,15 @@
 .success {
-	display: inline-block;
 	background-color: lightgreen;
 	border-top: 3px solid darkgreen;
 	border-bottom: 3px solid darkgreen;
+	width: 20em;
 }
 
 .error {
-	display: inline-block;
 	background-color: pink;
 	border-top: 3px solid darkred;
 	border-bottom: 3px solid darkred;
+	width: 20em;
 }
 
 .success, .error {
