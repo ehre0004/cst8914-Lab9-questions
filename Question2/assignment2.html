@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<header>
+			<div id="top" aria-hidden="true" style="background-color: lightyellow; border: 1px solid black; padding: 10px; box-sizing: border-box;"><a href="./assignment2_before.html">Compare with old version of this page.</a></div>
 			<h1>ARIA Assignment 2</h1>
 			<h2>What to do:</h2>
 			<ol>
@@ -28,29 +29,34 @@
 		</header>
 		<main>
 			<h2>Contact Us</h2>
+			<!-- added sendComment to form level, which passes the 'event'. -->
 			<form method="GET" action="contacted.html" onsubmit="sendComment(event)" autocomplete="on">
 			<div class="formDiv">
 				<label for="name">Your name:</label>
+				<!-- added additional instructions, including 'required' -->
 				<div class="desc" id="name_desc"><span class="required">Required.</span> Enter the name that will be associated with your comment.</div>
 				<input type="text" id="name" name="name" autocomplete="name" aria-describedby="name_desc">
 			</div>
 			<div class="formDiv">
 				<label for="emailaddy">Your email:</label>
+				<!-- added additional instructions, including 'required' -->
 				<div class="desc" id="email_desc"><span class="required">Required.</span> Enter a valid email for us to contact and identify you by.</div>
 				<input type="email" id="emailaddy" name="emailaddy" autocomplete="email" aria-describedby="email_desc">
 			</div>
 			<div class="formDiv">
 				<label for="comments">Your comments:</label>
+				<!-- added additional instructions, including 'required' -->
 				<div class="desc" id="comment_desc"><span class="required">Required.</span> Enter what you want to say to us.</div>
 				<textarea id="comments" name="comments" aria-describedby="comment_desc"></textarea>
 			</div>
 			<div class="formDiv">
-				<input type="checkbox" id="respond" name="respond" aria-describedby="respondlabel">
+				<input type="checkbox" id="respond" name="respond">
 				<label id="respondlabel" for="respond">I would like a response</label>
 			</div>
 			<div class="formDiv">
 			</div>
 			<p class="desc" id="practiceDesc">Note that this site is a practice site, and your comments won't actually go anywhere, and no matter what, you will <strong>not</strong> receive a response, except your own bitter disappointment.</p>
+			<!-- added aria-live region near submit button -->
 			<div id="status" aria-live="polite"></div>
 			<div class="formDiv">
 				<button type="submit" id="submitBtn" name="submitBtn">Submit</button>
