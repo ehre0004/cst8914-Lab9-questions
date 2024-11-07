@@ -20,19 +20,17 @@ function setStatus(msg, status) {
 	statusDiv.innerHTML = "<p class=\""+status+"\">"+msg+"</p>";
 }
 
+// list of readable names
 function getReadableName(id) {
-	switch (id) {
-		case 'name':
-			return 'your name';
-		case 'emailaddy':
-			return 'your email';
-		case 'comments':
-			return 'your comments';
-		default:
-			return null;
-	}
+	var readableNames = {
+		name: 'your name',
+		emailaddy: 'your email',
+		comments: 'your comments'
+	};
+	return (readableNames[id] == null) ? '' : readableNames[id];
 }
 
+// prints a readable, comma-delimited list for inclusion in a status message
 function printReadableList(list) {
 	var printableList = "";
 	let c = ", ";
@@ -45,25 +43,26 @@ function printReadableList(list) {
 	return printableList;
 }
 
-function validateForm() {
+// validates the form. returns false and sets status to error with listed fields, or returns true and continues sending comment
+function validateForm() { 
 	var form = {
 		name: document.getElementById('name'),
 		email: document.getElementById('emailaddy'),
 		comments: document.getElementById('comments')
 	};
-	var isValid = [];
-	var list = [];
-	for (let x of Object.values(form)) {
+	var isValid = []; // keeps track of validation of each form field specified in 'form'
+	var list = []; // list of errors, push readable names using getReadableName(id)
+	for (let x of Object.values(form)) { // loop through form properties and check for nulls and empties. if empty/null then isValid is false for that field
 		console.log('form field: '+x.id+', value: '+x.value);
 		if (x == null || x.value == "") {
 			isValid.push(false);
-			list.push(getReadableName(x.id))
+			list.push(getReadableName(x.id));
 		} else {
 			isValid.push(true);
 		}
 	}
-	var check = true;
-	for (let x of isValid) {
+	var check = true; // the final check. true by default
+	for (let x of isValid) { // if there are any fields from isValid that are false, then check is false (entire check fails)
 		if (x == false) {
 			check = false;
 		}
