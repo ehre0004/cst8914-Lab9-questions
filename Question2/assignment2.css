@@ -1,3 +1,11 @@
+.success {
+	color: darkgreen;
+}
+
+.error {
+	color: darkred;
+}
+
 ol ol {
 	list-style-type: lower-alpha;
 }
