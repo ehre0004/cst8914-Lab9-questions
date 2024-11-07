@@ -13,6 +13,11 @@
 	width: 20em;
 }
 
+.required {
+	color: darkred;
+	font-weight: bold;
+}
+
 ol ol {
 	list-style-type: lower-alpha;
 }

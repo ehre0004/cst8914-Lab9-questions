@@ -32,17 +32,17 @@
 			<form method="GET" action="contacted.html" onsubmit="sendComment(event)" autocomplete="on">
 			<div class="formDiv">
 				<label for="name">Your name:</label>
-				<div class="desc" id="name_desc">Required. Enter the name that will be associated with your comment.</div>
+				<div class="desc" id="name_desc"><span class="required">Required.</span> Enter the name that will be associated with your comment.</div>
 				<input type="text" id="name" name="name" autocomplete="name" aria-describedby="name_desc">
 			</div>
 			<div class="formDiv">
 				<label for="emailaddy">Your email:</label>
-				<div class="desc" id="email_desc">Required. Enter a valid email for us to contact and identify you by.</div>
+				<div class="desc" id="email_desc"><span class="required">Required.</span> Enter a valid email for us to contact and identify you by.</div>
 				<input type="email" id="emailaddy" name="emailaddy" autocomplete="email" aria-describedby="email_desc">
 			</div>
 			<div class="formDiv">
 				<label for="comments">Your comments:</label>
-				<div class="desc" id="comment_desc">Required. Enter what you want to say to us.</div>
+				<div class="desc" id="comment_desc"><span class="required">Required.</span> Enter what you want to say to us.</div>
 				<textarea id="comments" name="comments" aria-describedby="comment_desc"></textarea>
 			</div>
 			<div class="formDiv">
