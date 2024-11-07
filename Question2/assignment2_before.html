@@ -28,26 +28,22 @@
 		</header>
 		<main>
 			<h2>Contact Us</h2>
-			<div id="status" aria-hidden="true" aria-live="polite"></div>
-			<form method="GET" action="contacted.html" onsubmit="sendComment(event)" autocomplete="on">
+			<form method="GET" action="contacted.html" autocomplete="on">
 			<div class="formDiv">
 				<label for="name">Your name:</label>
-				<div id="name_desc">Enter the name that will be associated with your comment.</div>
-				<input type="text" id="name" name="name" autocomplete="name" aria-describedby="name_desc">
+				<input type="text" id="name" name="name" autocomplete="name">
 			</div>
 			<div class="formDiv">
 				<label for="emailaddy">Your email:</label>
-				<div id="email_desc">Enter a valid email for us to contact and identify you by.</div>
-				<input type="email" id="emailaddy" name="emailaddy" autocomplete="email" aria-describedby="email_desc">
+				<input type="email" id="emailaddy" name="emailaddy" autocomplete="email">
 			</div>
 			<div class="formDiv">
 				<label for="comments">Your comments:</label>
-				<div id="comment_desc">Enter what you want to say to us.</div>
-				<textarea id="comments" name="comments" aria-describedby="comment_desc"></textarea>
+				<textarea id="comments" name="comments"></textarea>
 			</div>
 			<div class="formDiv">
-				<input type="checkbox" id="respond" name="respond" aria-describedby="respondlabel">
-				<label id="respondlabel" for="respond">I would like a response</label>
+				<input type="checkbox" id="respond" name="respond">
+				<label for="respond">I would like a response</label>
 			</div>
 			<div class="formDiv">
 			</div>

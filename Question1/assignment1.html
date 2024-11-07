@@ -16,7 +16,13 @@
 		</header>
 		<!-- Changed <div role="main"> to <main> -->
 		<main>
-			<div role="document">
+			<!-- Added tabindex="0" to <div role="document">
+				"Because ATs with reading mode default to that mode for all elements except for those with 
+				a widget or application role set, document role is only useful for focusable elements within 
+				a widget or application that should be read as static rich text."
+				- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/document_role
+				 -->
+			<div role="document" tabindex="0">
 				<!-- Changed <div role="heading" aria-level="2"> to <h2> -->
 				<h2>I'm a monster.</h2>
 				<p>What's Spanish for "I know you speak English?" There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. I've opened a door here that I regret.</p>

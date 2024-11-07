@@ -14,12 +14,20 @@ if (submitBtn) {
         console.error ("Did not get the submit button for some reason.");
 }
 
+// provides the code for setting a message to the aria live region
+function setStatus(msg) {
+	var statusDiv = document.getElementById("status");
+	statusDiv.innerHTML = "&lt;p&gt;"+msg+"&lt;/p&gt;";
+}
+
 function sendComments (e) {
-	//e.preventDefault();  // When uncommented, this will prevent the form from submitting when the button is clicked
+	e.preventDefault();  // When uncommented, this will prevent the form from submitting when the button is clicked
 
 	// This is the message we want added to the aria live region
 	let msg = "Thank you for sending your comments. Your comments have already been thrown into the dustbin of the Interwebs, and will be ignored at once!"	;
 
 	// Now, add the code to insert the msg into the aria live region
+	setStatus(msg);
+
 	
 } // End of sendComments
